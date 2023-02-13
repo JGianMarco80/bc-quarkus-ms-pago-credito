@@ -4,14 +4,14 @@ import com.nttd.ms.pago.credito.entity.PagoCredito;
 import com.nttd.ms.pago.credito.service.PagoCreditoService;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 
 import java.util.List;
 
 @Path("/pago-credito")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class PagoCreditoResource {
 
     @Inject
